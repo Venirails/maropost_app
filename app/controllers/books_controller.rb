@@ -72,7 +72,7 @@ class BooksController < ApplicationController
 
     def admin_logged_in?
      if session[:admin].nil?
-       flash[:notice] = "You need to login as an admin to continue...."
+       flash[:notice] = "You need to login as an admin to continue to books"
        redirect_to admin_login_url
       end
     end
