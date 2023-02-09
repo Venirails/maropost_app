@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+
+<% @company.workers.each do |w|%>
+  Name : <%= w.name%><br />
+  Age: <%= w.age%><br />
+<% end %><br />
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
